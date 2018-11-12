@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="weather-wrapper">
+<view class="temp">20"</view>
+<view class="weather">晴天☀️</view>
+<image src='https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89ec16a5cf7765e8a7a300bf6b72d131&auto=format&fit=crop&w=700&q=60'></image>
+</view> 
