@@ -14,8 +14,18 @@ Page({
         city: '厦门市'
       },
       success: res => {
-        let xiamenList = res.data.result;
-        xiamenList.forecast.forEach(function(v){
+        let forecast = res.data.result.forecast;
+        let now = res.data.result.now;
+        let today = res.data.result.today;
+        forecast.forEach(function(v){
+          console.log(v.weather);
+          console.log(v.temp);
+        });
+        now.forEach(function (v) {
+          console.log(v.weather);
+          console.log(v.temp);
+        });
+        today.forEach(function (v) {
           console.log(v.weather);
           console.log(v.temp);
         });
