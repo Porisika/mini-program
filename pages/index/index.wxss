@@ -1,27 +1,37 @@
 /**index.wxss**/
 .temp{
-  margin-top: 100rpx;
   text-align: center;
-  font-size: 200rpx;
-  line-height: 280rpx;
+  font-size: 160rpx;
+  line-height: 80rpx;
   opacity: .8;
 }
 .weather{
   font-size: 40rpx;
   opacity:.65;
-  line-height: .56rpx;
+  line-height: 56rpx;
   text-align: center;
+  margin-top:50rpx;
 }
 .weather-wrapper{
-  height:760rpx;
   background-color: transparent;
   padding: 174rpx 0 250rpx;
 }
-image{
+.backgroundImage{
   position: absolute;
   top:0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 60%;
   z-index: -1;
+}
+.title{
+  font-size: 30rpx;
+  text-align: center;
+  opacity: .5;
+}
+.titleIcon{
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  padding-right: 10rpx;
 }

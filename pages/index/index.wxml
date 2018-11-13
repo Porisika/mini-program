@@ -1,6 +1,10 @@
 <!--index.wxml-->
-<view class="weather-wrapper">
-<view class="temp">{{temp}}</view>
-<view class="weather">{{weather}}☁️️</view>
-<image src='https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89ec16a5cf7765e8a7a300bf6b72d131&auto=format&fit=crop&w=700&q=60'></image>
-</view> 
+<scroll-view scroll-x>
+<view class='weather-wrapper'>
+<view class='temp'>{{temp}}</view>
+<view class='weather'>{{weather}}</view>
+<image class='backgroundImage' src='https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89ec16a5cf7765e8a7a300bf6b72d131&auto=format&fit=crop&w=700&q=60'></image>
+</view>  
+</scroll-view>
+<view class='title'><image class='titleIcon' src='https://raw.githubusercontent.com/udacity/cn-wechat-weather/4-1/images/time-icon.png'></image>未来24小时天气预测</view>
+<view class='weatherCols' wx:for="{{[1,2,3,4]}}"></view>

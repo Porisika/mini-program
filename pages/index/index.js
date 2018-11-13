@@ -1,6 +1,21 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const weatherMap={
+  'sunny':'晴天',
+  'cloudy': '多云',
+  'overcast': '阴天',
+  'lightrain': '小雨',
+  'heavyrain': '大雨',
+  'snow': '雪',
+};
+const weatherColorMap = {
+  'sunny': '#cbeefd',
+  'cloudy': '#deeef6',
+  'overcast': '#c6ced2',
+  'lightrain': '#bdd5e1',
+  'heavyrain': '#c5ccd0',
+  'snow': '雪',
+};
 
 Page({
   data:{
@@ -14,13 +29,12 @@ Page({
         city: '厦门市'
       },
       success: res => {
-        let forecast = res.data.result.forecast;
-        let now = res.data.result.now;
-        let today = res.data.result.today;
-        forecast.forEach(function(v){
-          console.log(v.weather);
-          console.log(v.temp);
-        });
+        let result = res.data.result;
+        let temp = result.now.temp;
+        let weather = result.now.weather;
+        console.log(result);
+        console.log(temp);
+        console.log(weather);
       }
     })
   },
