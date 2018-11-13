@@ -7,7 +7,7 @@ Page({
     weather:'阴天',
     temp:'20"'
   },
-  onLoad(){
+  getNow(){
     wx.request({
       url: 'https://test-miniprogram.com/api/weather/now',
       data: {
@@ -21,15 +21,13 @@ Page({
           console.log(v.weather);
           console.log(v.temp);
         });
-        now.forEach(function (v) {
-          console.log(v.weather);
-          console.log(v.temp);
-        });
-        today.forEach(function (v) {
-          console.log(v.weather);
-          console.log(v.temp);
-        });
       }
     })
+  },
+  onPullDownRefresh(){
+   this.getNow();
+  },
+  onLoad(){
+   this.getNow();
   },
 })
