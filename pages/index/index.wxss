@@ -1,37 +1,49 @@
 /**index.wxss**/
-.temp{
-  text-align: center;
-  font-size: 160rpx;
-  line-height: 80rpx;
-  opacity: .8;
-}
-.weather{
-  font-size: 40rpx;
-  opacity:.65;
-  line-height: 56rpx;
-  text-align: center;
-  margin-top:50rpx;
+.scroll-view-x{
+  height: 600rpx;
+  display: flex;
+  white-space: nowrap;
 }
 .weather-wrapper{
-  background-color: transparent;
-  padding: 174rpx 0 250rpx;
-}
-.backgroundImage{
-  position: absolute;
-  top:0;
-  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89ec16a5cf7765e8a7a300bf6b72d131&auto=format&fit=crop&w=700&q=60');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 60%;
-  z-index: -1;
+  height: 600rpx;
+  display: inline-block;
 }
-.title{
-  font-size: 30rpx;
+.temp{
+  font-size: 200rpx;
+  text-align: center;
+  padding-top: 100rpx;
+}
+.weather{
+  text-align: center;
+}
+.forecast-icon{
+  width: 36rpx;
+  height: 24rpx;
+}
+.weather-title{
   text-align: center;
   opacity: .5;
+  font-size: 36rpx;
 }
-.titleIcon{
+.wholeDayWeatherScroll{
+ height: 600rpx;
+ padding-top: 50rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.wholeDayWeather{
+  width: 200rpx;
+  height: 750rpx;
   display: inline-block;
-  width: 24rpx;
-  height: 24rpx;
-  padding-right: 10rpx;
+  border-right:1px solid whitesmoke;
+  font-size: 50rpx;
+  opacity: .7;
+}
+.period{
+  padding-top: 80rpx;
+  text-align: center;
 }

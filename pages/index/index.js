@@ -14,13 +14,12 @@ const weatherColorMap = {
   'overcast': '#c6ced2',
   'lightrain': '#bdd5e1',
   'heavyrain': '#c5ccd0',
-  'snow': '雪',
 };
 
 Page({
   data:{
-    weather:'阴天',
-    temp:'20"'
+    temp: '20"',
+    weather:'阴天'
   },
   getNow(){
     wx.request({
