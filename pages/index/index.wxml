@@ -1,7 +1,8 @@
 <!--index.wxml-->
-<scroll-view scroll-x class='scroll-view-x' bindscroll="scrollX">
+<scroll-view scroll-x class='scroll-view-x' upper-threshold="375rpx" 
+lower-threshold="375rpx" bindscrolltoupper="scrollX" bindscrolltolower="scrollX" bindtap='changeNavigationBarColor'>
 <view class='weather-wrapper' wx:for="{{citys}}">
-<view class='temp'>{{temp}}</view>
+<view class='temp'>{{temp}}°</view>
 <view class='weather'>{{weather}}</view>
 </view>
 </scroll-view>
@@ -9,7 +10,7 @@
 <image class='forecast-icon' src='https://raw.githubusercontent.com/udacity/cn-wechat-weather/4-1/images/time-icon.png'></image>24小时天气预报概况</view>
 <scroll-view scroll-x class='wholeDayWeatherScroll'>
 <view class='wholeDayWeather' wx:for="{{forecastArr}}">
-<view class='period periodTemp'>{{item.temp}}"</view>
+<view class='period periodTemp'>{{item.temp}}°</view>
 <view class='period periodIcon'>{{weatherMap[item.weather]}}</view>
 <view class='period periodWeather'>{{weatherIocn[item.weather]}}</view>
 </view>
