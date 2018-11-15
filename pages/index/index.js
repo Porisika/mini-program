@@ -66,13 +66,11 @@ Page({
   },
   shareMessage(){
     wx.showShareMenu({
-      withShareTicket: false,
-      title: '蠡湖',
-      imageUrl: 'https://images.unsplash.com/photo-1498335746477-0c73d7353a07?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1e8d56c5d16f5f0e6198f9920b9052dc&auto=format&fit=crop&w=700&q=60',
+      withShareTicket: true,
     });
   },
   onLoad(){
-   this.getNow();
+    this.getNow();
     this.shareMessage();
   },
   scrollX(){
@@ -86,11 +84,8 @@ Page({
       title: '蠡湖',
     });
     wx.setNavigationBarColor({
-      frontColor: '#ffffff',
+      frontColor: '#000000',
       backgroundColor: '#ffffff',
     })
-  },
-  onPageScroll(){
-    console.log('滚动中');
   },
 })
