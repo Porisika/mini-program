@@ -1,0 +1,14 @@
+<!--pages/list/list.wxml-->
+<view class='wrapper'>
+<view wx:for="{{forecastList}}" wx:key="{{index}}" class='list-wrapper'>
+ 
+<view wx:if="{{item.id===0}}">今天</view>
+<view wx:if="{{item.id===1}}">明天</view>
+<view wx:if="{{item.id===2}}">后天</view>
+<view wx:if="{{item.id>2}}">星期{{dateList[(date+item.id)%7]}}</view>
+
+<view>{{weatherTexObj[item.weather]}}</view>
+<view>{{weatherObj[item.weather]}}</view>
+<view>{{item.temp}}°</view>
+</view>
+</view>

@@ -1,17 +1,14 @@
-<!--index.wxml-->
-<scroll-view scroll-x class='scroll-view-x' upper-threshold="375rpx" 
-lower-threshold="375rpx" bindscrolltoupper="scrollX" bindscrolltolower="scrollX" bindtap='changeNavigationBarColor'>
-<view class='weather-wrapper' wx:for="{{citys}}">
-<view class='temp'>{{temp}}°</view>
-<view class='weather'>{{weather}}</view>
+<view class='weather-wrapper' bindtap='getForecastList'>
+<view class='location tc'>{{city}}</view>
+<view class='temp tc'>{{temp}}</view>
+<view class='weather tc'>
+<view>{{weatherTexObj[weather]}}</view>
 </view>
-</scroll-view>
-<view class='weather-title'>
-<image class='forecast-icon' src='https://raw.githubusercontent.com/udacity/cn-wechat-weather/4-1/images/time-icon.png'></image>24小时天气预报概况</view>
-<scroll-view scroll-x class='wholeDayWeatherScroll'>
-<view class='wholeDayWeather' wx:for="{{forecastArr}}">
-<view class='period periodTemp'>{{item.temp}}°</view>
-<view class='period periodIcon'>{{weatherMap[item.weather]}}</view>
-<view class='period periodWeather'>{{weatherIocn[item.weather]}}</view>
+</view>
+<scroll-view class='forecastList-wrapper' scroll-x>
+<view class='forecast-item' wx:for="{{forecastList}}" wx:key="{{index}}" >
+ <view>{{item.temp}}°</view>
+<view>{{weatherTexObj[item.weather]}}</view>
+<view>{{weatherObj[item.weather]}}</view>
 </view>
 </scroll-view>
