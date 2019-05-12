@@ -4,10 +4,11 @@
     "pages/list/list"
   ],
   "window": {
-    "backgroundTextStyle": "black",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "天气小应用",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
