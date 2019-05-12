@@ -1,14 +1,6 @@
-<view class='weather-wrapper' bindtap='getForecastList'>
-<view class='location tc'>{{city}}</view>
-<view class='temp tc'>{{temp}}</view>
-<view class='weather tc'>
-<view>{{weatherTexObj[weather]}}</view>
+<!--pages/index/index.wxml-->
+<view class='weather-wrapper'>
+<view class='title'>20°</view>
+<view class='weather'>晴天</view>
+<image class='weather-bg' src='/images/sunny-bg.png' mode='scaleToFil'></image>
 </view>
-</view>
-<scroll-view class='forecastList-wrapper' scroll-x>
-<view class='forecast-item' wx:for="{{forecastList}}" wx:key="{{index}}" >
- <view>{{item.temp}}°</view>
-<view>{{weatherTexObj[item.weather]}}</view>
-<view>{{weatherObj[item.weather]}}</view>
-</view>
-</scroll-view>
