@@ -27,3 +27,39 @@
   bottom: 0;
   z-index: -1;
 }
+.forecast-title{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: .8;
+  position: relative;
+  text-align: center;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+  margin-top: 60rpx;
+  opacity: .6;
+}
+.time-icon{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 220rpx;
+}
+.forecast-list{
+  display: flex;
+  font-size: 36rpx;
+  opacity: .4;
+}
+.forecast-list view{
+  margin-bottom: 40rpx;
+}
+.forecast-item{
+  display: block;
+  width: 500rpx;
+  height: 300rpx;
+  text-align: center;
+}
+.forecast-weather{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 40rpx;
+}
