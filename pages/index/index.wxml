@@ -3,11 +3,18 @@
 <view class='title'>{{nowTemp}}°</view>
 <view class='weather'>{{nowWeather}}</view>
 <image class='weather-bg' src='{{nowWeatherBackground}}' mode='scaleToFil'></image>
+<view class='weather-subwrapper'>
+<view class='dateStr'>{{dateStr}}</view>
+<view class='tempZone'>{{tempZone}}</view>
+<image style="margin-top:30rpx;width:13rpx;height:24rpx;" src='/images/arrow.png'></image>
 </view>
+</view>
+
 <view class='forecast-title'>
 <image class='time-icon' src='/images/time-icon.png'></image>
 未来24小时天气预报
 </view>
+
 <scroll-view scroll-x style='margin-top:40rpx;'>
 <view class='forecast-list'>
 <view class='forecast-item' wx:for="{{forecast}}">

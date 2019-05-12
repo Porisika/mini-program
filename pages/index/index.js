@@ -9,6 +9,8 @@ Page({
     nowWeather:'',
     nowWeatherBackground:'',
     forecast:[],
+    dateStr:'',
+    tempZone:'',
   },
   getNow(callback){
     console.log('小程序刚刚启动啦!');
@@ -67,7 +69,13 @@ Page({
           that.setData({
             forecast:forecast
           });
-        }
+        };
+        let dateStr = new Date().getFullYear() + '/' + (new Date().getMonth() +1)+'/' + new Date().getDate();
+        let todayTemp = result.today;
+        that.setData({
+          dateStr: dateStr,
+          tempZone: todayTemp.minTemp + '°' + '~' + todayTemp.maxTemp + '°',
+        });
       },
       complete: () => {
         callback && callback()
